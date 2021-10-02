@@ -5,15 +5,15 @@ export const AboutSection = () => {
       <Description>
         <div className="title">
           <Hide>
-            <h2>I work to make</h2>
+            <h2>I work hard to make</h2>
           </Hide>
           <Hide>
             <h2>
-              my <span>dreams</span> come
+              my <span>dreams</span>
             </h2>
           </Hide>
           <Hide>
-            <h2>true.</h2>
+            <h2>come true.</h2>
           </Hide>
         </div>
         <p>

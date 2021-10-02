@@ -43,10 +43,7 @@ export const ServicesSection = () => {
         </Cards>
       </Description>
       <Image>
-        <img
-          src="https://via.placeholder.com/500x750?text=photo"
-          alt="my photo"
-        />
+        <img src="https://via.placeholder.com/500x750?text=photo" alt="me" />
       </Image>
     </Services>
   );
