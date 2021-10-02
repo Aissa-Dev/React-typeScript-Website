@@ -9,7 +9,7 @@ export const ServicesSection = () => {
     <Services>
       <Description>
         <h2>
-          High <span>quality</span>services
+          High <span>quality</span> services
         </h2>
         <Cards>
           <Card>

@@ -5,11 +5,11 @@ export const AboutSection = () => {
       <Description>
         <div className="title">
           <Hide>
-            <h2>I work hard to make</h2>
+            <h2>We work to make</h2>
           </Hide>
           <Hide>
             <h2>
-              my <span>dreams</span>
+              your <span>dreams</span>
             </h2>
           </Hide>
           <Hide>
@@ -17,10 +17,10 @@ export const AboutSection = () => {
           </Hide>
         </div>
         <p>
-          Contact me if you want to make amazing website, I use React Js
-          TypeScript Sass Webpack Node MongoDb
+          Contact us for any photography or videography ideas that you have. we
+          have materials and professionals with amazing skills.
         </p>
-        <button>Contact Us</button>
+        <button>Contact Me</button>
       </Description>
       <Image>
         <img
@@ -31,5 +31,3 @@ export const AboutSection = () => {
     </About>
   );
 };
-
-//Styled Components
