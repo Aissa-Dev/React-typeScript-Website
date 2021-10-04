@@ -1,11 +1,27 @@
 import { About, Description, Hide, Image } from "../styles";
+import { motion } from "framer-motion";
 export const AboutSection = () => {
+  const titleAnim = {
+    hidden: { opacity: 0 },
+    show: { opacity: 0.5, transition: { duration: 1 } }
+  };
+  const titleContainer = {
+    hidden: { x: 100 },
+    show: { x: 0, transition: { duration: 1, ease: "easeOut" } }
+  };
   return (
     <About>
       <Description>
-        <div className="title">
+        <motion.div
+          variants={titleContainer}
+          initial="hidden"
+          animate="show"
+          className="title"
+        >
           <Hide>
-            <h2>We work to make</h2>
+            <motion.h2 variants={titleAnim} initial="hidden" animate="show">
+              We work to make
+            </motion.h2>
           </Hide>
           <Hide>
             <h2>
@@ -15,7 +31,7 @@ export const AboutSection = () => {
           <Hide>
             <h2>come true.</h2>
           </Hide>
-        </div>
+        </motion.div>
         <p>
           Contact us for any photography or videography ideas that you have. we
           have materials and professionals with amazing skills.
