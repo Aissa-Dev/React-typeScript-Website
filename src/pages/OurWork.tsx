@@ -5,9 +5,19 @@ import goodtimes from "../img/goodtimes.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+//Animation
+import { motion } from "framer-motion";
+import { pageAnimation } from "../Animation";
+
 export const OurWork = () => {
   return (
-    <Work>
+    <Work
+      style={{ background: "#fff" }}
+      variants={pageAnimation}
+      exit="exit"
+      initial="hidden"
+      animate="show"
+    >
       <Movie>
         <h2>The Athlete</h2>
         <div className="line"></div>
@@ -33,7 +43,7 @@ export const OurWork = () => {
   );
 };
 
-const Work = styled.div`
+const Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;

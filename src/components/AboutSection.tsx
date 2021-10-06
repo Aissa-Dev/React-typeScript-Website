@@ -3,11 +3,14 @@ import { motion } from "framer-motion";
 export const AboutSection = () => {
   const titleAnim = {
     hidden: { opacity: 0 },
-    show: { opacity: 0.5, transition: { duration: 1 } }
+    show: { opacity: 1, transition: { duration: 1 } }
   };
   const titleContainer = {
     hidden: { x: 100 },
-    show: { x: 0, transition: { duration: 1, ease: "easeOut" } }
+    show: {
+      x: 0,
+      transition: { duration: 1, ease: "easeOut", staggerChildren: 1 }
+    }
   };
   return (
     <About>
@@ -19,17 +22,15 @@ export const AboutSection = () => {
           className="title"
         >
           <Hide>
-            <motion.h2 variants={titleAnim} initial="hidden" animate="show">
-              We work to make
+            <motion.h2 variants={titleAnim}>We work to make</motion.h2>
+          </Hide>
+          <Hide>
+            <motion.h2 variants={titleAnim}>
+              your <span>dreams</span>
             </motion.h2>
           </Hide>
           <Hide>
-            <h2>
-              your <span>dreams</span>
-            </h2>
-          </Hide>
-          <Hide>
-            <h2>come true.</h2>
+            <motion.h2 variants={titleAnim}>come true.</motion.h2>
           </Hide>
         </motion.div>
         <p>
