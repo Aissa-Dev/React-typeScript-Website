@@ -1,26 +1,12 @@
 import { About, Description, Hide, Image } from "../styles";
 import { motion } from "framer-motion";
+import { titleAnim, fade, photoAnimation } from "../Animation";
+import home1 from "../img/home1.png";
 export const AboutSection = () => {
-  const titleAnim = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: 1 } }
-  };
-  const titleContainer = {
-    hidden: { x: 100 },
-    show: {
-      x: 0,
-      transition: { duration: 1, ease: "easeOut", staggerChildren: 1 }
-    }
-  };
   return (
     <About>
       <Description>
-        <motion.div
-          variants={titleContainer}
-          initial="hidden"
-          animate="show"
-          className="title"
-        >
+        <motion.div>
           <Hide>
             <motion.h2 variants={titleAnim}>We work to make</motion.h2>
           </Hide>
@@ -33,17 +19,14 @@ export const AboutSection = () => {
             <motion.h2 variants={titleAnim}>come true.</motion.h2>
           </Hide>
         </motion.div>
-        <p>
+        <motion.p variants={fade}>
           Contact us for any photography or videography ideas that you have. we
           have materials and professionals with amazing skills.
-        </p>
-        <button>Contact Me</button>
+        </motion.p>
+        <motion.button variants={fade}>Contact Me</motion.button>
       </Description>
       <Image>
-        <img
-          src="https://via.placeholder.com/503x750?text=My photo"
-          alt="my photo"
-        />
+        <motion.img variants={photoAnimation} src={home1} alt="Photographer" />
       </Image>
     </About>
   );
