@@ -2,11 +2,26 @@ import clock from "../img/clock.svg";
 import money from "../img/money.svg";
 import teams from "../img/teamwork.svg";
 import design from "../img/diaphragm.svg";
+import servicPic from "../img/home2.png";
+//styling
 import { About, Description, Image } from "../styles";
 import styled from "styled-components";
+//test
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
+import { fade } from "../Animation";
+
 export const ServicesSection = () => {
+  const controls = useAnimation();
+  const [element, view] = useInView({ threshold: 0.5 });
+  if (view) {
+    controls.start("show");
+  } else {
+    controls.start("hidden");
+  }
+
   return (
-    <Services>
+    <Services variants={fade} initial="hidden" animate={controls} ref={element}>
       <Description>
         <h2>
           High <span>quality</span> services
@@ -43,7 +58,7 @@ export const ServicesSection = () => {
         </Cards>
       </Description>
       <Image>
-        <img src="https://via.placeholder.com/500x750?text=photo" alt="me" />
+        <img src={servicPic} alt="me" />
       </Image>
     </Services>
   );
