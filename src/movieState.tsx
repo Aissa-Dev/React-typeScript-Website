@@ -1,18 +1,18 @@
 //Import Images
-import athlete from "./img/athlete.png";
-import goodtimes from "./img/goodtimes.png";
-import theracer from "./img/theracer.png";
-import athlete2 from "./img/athlete2.png";
-import goodtimes2 from "./img/good-times2.jpg";
-import theracer2 from "./img/the-racer2.jpg";
+import narcos1 from "./img/narcos1.jpg";
+import narcos2 from "./img/narcos2.jpg";
+import prisonbreak1 from "./img/prisonbreak1.jpg";
+import prisonbreak2 from "./img/prisonbreak2.jpg";
+import breakingbad1 from "./img/breakingbad1.jpg";
+import breakingbad2 from "./img/breakingbad2.jpg";
 
 export const MovieState = () => {
   return [
     {
-      title: "The Athlete",
-      mainImg: athlete,
-      secondaryImg: athlete2,
-      url: "/work/the-athlete",
+      title: "Narcos",
+      mainImg: narcos1,
+      secondaryImg: narcos2,
+      url: "/work/narcos",
       awards: [
         {
           title: "Truly A masterpiece",
@@ -32,10 +32,10 @@ export const MovieState = () => {
       ]
     },
     {
-      title: "Good Times",
-      mainImg: goodtimes,
-      url: "/work/good-times",
-      secondaryImg: goodtimes2,
+      title: "Breaking Bad",
+      mainImg: breakingbad1,
+      url: "/work/breaking-bad",
+      secondaryImg: breakingbad2,
       awards: [
         {
           title: "Truly A masterpiece",
@@ -55,10 +55,10 @@ export const MovieState = () => {
       ]
     },
     {
-      title: "The Racer",
-      mainImg: theracer,
-      url: "/work/the-racer",
-      secondaryImg: theracer2,
+      title: "Prison Break",
+      mainImg: prisonbreak1,
+      url: "/work/prison-break",
+      secondaryImg: prisonbreak2,
       awards: [
         {
           title: "Truly A masterpiece",

@@ -6,6 +6,7 @@ import { ServicesSection } from "../components/ServicesSection";
 //Animation
 import { motion } from "framer-motion";
 import { pageAnimation } from "../Animation";
+import { ScrollTop } from "../components/ScrollTop";
 
 export const AboutUs = () => {
   return (
@@ -15,6 +16,7 @@ export const AboutUs = () => {
       animate="show"
       exit="exit"
     >
+      <ScrollTop />
       <AboutSection />
       <ServicesSection />
       <FaqSection />

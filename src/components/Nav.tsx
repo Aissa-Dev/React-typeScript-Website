@@ -10,7 +10,7 @@ export const Nav = () => {
       </h1>
       <ul>
         <li>
-          <Link to="/">1. About Me</Link>
+          <Link to="/">1. About Us</Link>
         </li>
         <li>
           <Link to="/work">2. Our Work</Link>
@@ -31,6 +31,9 @@ const StyledNav = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 10rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   a {
     color: white;
     text-decoration: none;

@@ -1,7 +1,7 @@
 //Images
-import athlete from "../img/athlete.png";
-import theracer from "../img/theracer.png";
-import goodtimes from "../img/goodtimes.png";
+import work1 from "../img/narcos1.jpg";
+import work2 from "../img/breakingbad1.jpg";
+import work3 from "../img/prisonbreak1.jpg";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -16,6 +16,7 @@ import {
   lineAnim
 } from "../Animation";
 import { useScroll } from "../components/useScroll";
+import { ScrollTop } from "../components/ScrollTop";
 
 export const OurWork = () => {
   const [element1, controls1] = useScroll();
@@ -28,6 +29,7 @@ export const OurWork = () => {
       initial="hidden"
       animate="show"
     >
+      <ScrollTop />
       <motion.div variants={sliderContainer}>
         <Frame1 variants={slider}></Frame1>
         <Frame2 variants={slider}></Frame2>
@@ -35,14 +37,14 @@ export const OurWork = () => {
         <Frame4 variants={slider}></Frame4>
       </motion.div>
       <Movie>
-        <motion.h2 variants={fade}>The Athlete</motion.h2>
+        <motion.h2 variants={fade}>Narcos</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-athlete">
+        <Link to="/work/narcos">
           <Hide>
             <motion.img
               variants={photoAnimation}
-              src={athlete}
-              alt="Athlete movie"
+              src={work1}
+              alt="narcos movie"
             />
           </Hide>
         </Link>
@@ -53,10 +55,10 @@ export const OurWork = () => {
         initial="hidden"
         animate={controls1}
       >
-        <h2>The Racer</h2>
+        <h2>Breaking Bad</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-racer">
-          <img src={theracer} alt="the racer movie" />
+        <Link to="/work/breaking-bad">
+          <img src={work2} alt="breaking bad movie" />
         </Link>
       </Movie>
       <Movie
@@ -65,10 +67,10 @@ export const OurWork = () => {
         initial="hidden"
         animate={controls2}
       >
-        <h2>Good Times</h2>
+        <h2>Prison Break</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/good-times">
-          <img src={goodtimes} alt="goodtimes movie" />
+        <Link to="/work/prison-break">
+          <img src={work3} alt="prison break" />
         </Link>
       </Movie>
     </Work>
