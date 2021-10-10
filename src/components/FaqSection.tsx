@@ -3,62 +3,58 @@ import { About } from "../styles";
 import { Toggle } from "./Toggle";
 import { AnimateSharedLayout } from "framer-motion";
 import { useScroll } from "./useScroll";
-import { scrollReveal } from "../Animation";
-
+import { fade, scrollReveal } from "../Animation";
 export const FaqSection = () => {
   const [element, controls] = useScroll();
   return (
-    <Faq
-      variants={scrollReveal}
-      initial="hidden"
-      animate={controls}
-      ref={element}
-    >
-      <h2>
-        Any question <span>FAQ</span>
-      </h2>
-      <AnimateSharedLayout>
-        <Toggle title="Payment Methods">
-          <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Distinctio, quos.
-            </p>
-          </div>
-        </Toggle>
+    <div>
+      <Faq variants={fade} initial="hidden" animate={controls} ref={element}>
+        <h2>
+          Any question <span>FAQ</span>
+        </h2>
+        <AnimateSharedLayout>
+          <Toggle title="Payment Methods">
+            <div className="answer">
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Distinctio, quos.
+              </p>
+            </div>
+          </Toggle>
 
-        <Toggle title="Pricing">
-          <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Distinctio, quos.
-            </p>
-          </div>
-        </Toggle>
+          <Toggle title="Pricing">
+            <div className="answer">
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Distinctio, quos.
+              </p>
+            </div>
+          </Toggle>
 
-        <Toggle title="What do we do">
-          <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Distinctio, quos.
-            </p>
-          </div>
-        </Toggle>
+          <Toggle title="What do we do">
+            <div className="answer">
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Distinctio, quos.
+              </p>
+            </div>
+          </Toggle>
 
-        <Toggle title="What do you do">
-          <div className="answer">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Distinctio, quos.
-            </p>
-          </div>
-        </Toggle>
-      </AnimateSharedLayout>
-    </Faq>
+          <Toggle title="What do you do">
+            <div className="answer">
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Distinctio, quos.
+              </p>
+            </div>
+          </Toggle>
+        </AnimateSharedLayout>
+      </Faq>
+    </div>
   );
 };
 
