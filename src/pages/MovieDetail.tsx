@@ -92,6 +92,17 @@ const HeadLine = styled.div`
     height: 70vh;
     object-fit: cover;
   }
+
+  @media (max-width: 1500px) {
+    text-align: center;
+    h2 {
+      width: 100%;
+    }
+
+    img {
+      margin-top: 2rem;
+    }
+  }
 `;
 
 const Awards = styled.div`
