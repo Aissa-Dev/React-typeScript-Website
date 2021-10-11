@@ -75,15 +75,21 @@ const Services = styled(About)`
       width: 40px;
     }
   }
+  @media (max-width: 1300px) {
+    display: block;
+  }
 `;
 
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
 `;
 
 const Card = styled.div`
-  flex-basis: 50%;
+  flex-basis: 20rem;
   .icon {
     display: flex;
     align-items: center;
